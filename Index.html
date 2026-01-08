@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDA AI | US Phone Number Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/photo_2025-12-08_18-31-25.jpg">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="panda-face">
+                <div class="ear left-ear"></div>
+                <div class="ear right-ear"></div>
+                <div class="eye left-eye"></div>
+                <div class="eye right-eye"></div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="loading-text">
+                <span class="logo-text">
+                    <span>P</span>
+                    <span>A</span>
+                    <span>N</span>
+                    <span>D</span>
+                    <span>A</span>
+                    <span class="space"></span>
+                    <span>A</span>
+                    <span>I</span>
+                </span>
+                <p>Initializing Number Generator...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <div class="panda-icon">
+                                <div class="panda-ear left"></div>
+                                <div class="panda-ear right"></div>
+                                <div class="panda-eye left"></div>
+                                <div class="panda-eye right"></div>
+                                <div class="panda-nose"></div>
+                            </div>
+                        </div>
+                        <div class="logo-text-container">
+                            <h1 class="logo-text">
+                                <span>P</span>
+                                <span>A</span>
+                                <span>N</span>
+                                <span>D</span>
+                                <span>A</span>
+                                <span class="space"></span>
+                                <span>A</span>
+                                <span>I</span>
+                            </h1>
+                            <p class="tagline">Advanced Phone Number Generator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="todayUsers">1,247</div>
+                            <div class="stat-label">Users Today</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="activeNow">142</div>
+                            <div class="stat-label">Active Now</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Generate <span class="highlight">Unique</span> US Phone Numbers</h2>
+                    <p>Create valid, random US phone numbers for testing, development, and demonstration purposes. Our advanced algorithm ensures every number is unique across all users.</p>
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Unique Numbers</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time Generation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-lock"></i>
+                            <span>No Personal Data</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="phone-illustration">
+                        <div class="phone-screen">
+                            <div class="screen-content">
+                                <div class="number-display">
+                                    <span class="area-code">(555)</span>
+                                    <span class="number">123-4567</span>
+                                </div>
+                                <div class="phone-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Generator Section -->
+            <section class="generator-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="fas fa-magic"></i>
+                        <h2>Number Generator</h2>
+                    </div>
+                    <div class="section-subtitle">Customize your phone number generation settings</div>
+                </div>
+
+                <div class="generator-container">
+                    <!-- Controls Panel -->
+                    <div class="controls-panel">
+                        <div class="control-group">
+                            <label class="control-label">
+                                <i class="fas fa-hashtag"></i>
+                                Quantity
+                            </label>
+                            <div class="quantity-control">
+                                <input type="range" id="quantityRange" min="1" max="50" value="10" class="range-slider">
+                                <div class="quantity-display">
+                                    <span class="min">1</span>
+                                    <span class="value" id="quantityValue">10</span>
+                                    <span class="max">50</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Area Code
+                            </label>
+                            <div class="area-code-input">
+                                <input type="text" id="areaCode" placeholder="e.g., 212, 310, 415" maxlength="3">
+                                <div class="input-hint">Leave empty for random</div>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">
+                                <i class="fas fa-paint-brush"></i>
+                                Format
+                            </label>
+                            <div class="format-options">
+                                <div class="format-grid">
+                                    <label class="format-option">
+                                        <input type="radio" name="format" value="standard" checked>
+                                        <div class="format-card">
+                                            <div class="format-preview">(555) 123-4567</div>
+                                            <span>Standard</span>
+                                        </div>
+                                    </label>
+                                    <label class="format-option">
+                                        <input type="radio" name="format" value="dashes">
+                                        <div class="format-card">
+                                            <div class="format-preview">555-123-4567</div>
+                                            <span>Dashes</span>
+                                        </div>
+                                    </label>
+                                    <label class="format-option">
+                                        <input type="radio" name="format" value="spaces">
+                                        <div class="format-card">
+                                            <div class="format-preview">555 123 4567</div>
+                                            <span>Spaces</span>
+                                        </div>
+                                    </label>
+                                    <label class="format-option">
+                                        <input type="radio" name="format" value="plain">
+                                        <div class="format-card">
+                                            <div class="format-preview">5551234567</div>
+                                            <span>Plain</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button id="generateBtn" class="btn btn-primary btn-large">
+                                <i class="fas fa-bolt"></i>
+                                <span>Generate Numbers</span>
+                            </button>
+                            <button id="copyBtn" class="btn btn-secondary btn-large">
+                                <i class="far fa-copy"></i>
+                                <span>Copy All</span>
+                            </button>
+                            <button id="resetBtn" class="btn btn-ghost btn-large">
+                                <i class="fas fa-redo"></i>
+                                <span>Reset</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Results Panel -->
+                    <div class="results-panel">
+                        <div class="results-header">
+                            <div class="results-title">
+                                <i class="fas fa-list"></i>
+                                <h3>Generated Numbers</h3>
+                            </div>
+                            <div class="results-count">
+                                <span class="count" id="count">0</span>
+                                <span class="label">numbers</span>
+                            </div>
+                        </div>
+
+                        <div class="results-container" id="resultsContainer">
+                            <div class="empty-state">
+                                <div class="empty-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h4>No Numbers Generated Yet</h4>
+                                <p>Adjust the settings and click "Generate Numbers" to create unique phone numbers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-content">
+                            <div class="stat-icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="totalGenerated">5.2M</div>
+                                <div class="stat-label">Total Numbers Generated</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-content">
+                            <div class="stat-icon-wrapper">
+                                <i class="fas fa-unique"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="uniqueToday">324,891</div>
+                                <div class="stat-label">Unique Today</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-content">
+                            <div class="stat-icon-wrapper">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="generationSpeed">0.02s</div>
+                                <div class="stat-label">Avg. Generation Time</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-content">
+                            <div class="stat-icon-wrapper">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Unique Guarantee</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Sections -->
+            <div class="info-sections">
+                <section class="info-section">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>How It Works</h3>
+                        </div>
+                        <div class="info-card-body">
+                            <p>Our advanced algorithm generates unique, valid US phone numbers following NANP standards, ensuring no duplicates across users.</p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-check"></i> Area codes never start with 0 or 1</li>
+                                <li><i class="fas fa-check"></i> Exchange codes follow valid patterns</li>
+                                <li><i class="fas fa-check"></i> Real-time duplicate prevention</li>
+                                <li><i class="fas fa-check"></i> Session-based uniqueness</li>
+                                <li><i class="fas fa-check"></i> Daily reset for fresh numbers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Privacy & Security</h3>
+                        </div>
+                        <div class="info-card-body">
+                            <p>Your privacy is our top priority. We generate numbers without collecting any personal information.</p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-lock"></i> No personal data collection</li>
+                                <li><i class="fas fa-user-secret"></i> Anonymous session IDs</li>
+                                <li><i class="fas fa-database"></i> Local storage only</li>
+                                <li><i class="fas fa-ban"></i> No tracking or cookies</li>
+                                <li><i class="fas fa-eye-slash"></i> Zero data retention</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3>Important Disclaimer</h3>
+                        </div>
+                        <div class="info-card-body">
+                            <p>These phone numbers are generated for legitimate testing and development purposes only.</p>
+                            <div class="disclaimer-box">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Do not use generated numbers for illegal activities, harassment, fraud, or any malicious purposes. All numbers are virtual and not connected to real individuals.</p>
+                            </div>
+                            <div class="use-cases">
+                                <h4>Approved Use Cases:</h4>
+                                <div class="use-case-tags">
+                                    <span class="tag">Software Testing</span>
+                                    <span class="tag">App Development</span>
+                                    <span class="tag">Data Validation</span>
+                                    <span class="tag">Educational Demos</span>
+                                    <span class="tag">System Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <div class="panda-icon">
+                                <div class="panda-ear left"></div>
+                                <div class="panda-ear right"></div>
+                                <div class="panda-eye left"></div>
+                                <div class="panda-eye right"></div>
+                                <div class="panda-nose"></div>
+                            </div>
+                        </div>
+                        <div class="footer-logo-text">
+                            <span class="logo-text">
+                                <span>P</span>
+                                <span>A</span>
+                                <span>N</span>
+                                <span>D</span>
+                                <span>A</span>
+                                <span class="space"></span>
+                                <span>A</span>
+                                <span>I</span>
+                            </span>
+                            <p class="footer-tagline">Advanced Number Generation</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Creating unique, valid phone numbers for legitimate testing and development purposes since 2023.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Generator</h4>
+                        <a href="#" class="footer-link">US Numbers</a>
+                        <a href="#" class="footer-link">Custom Formats</a>
+                        <a href="#" class="footer-link">API Access</a>
+                        <a href="#" class="footer-link">Bulk Generation</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="#" class="footer-link">Contact Us</a>
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Discord</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 PANDA AI Phone Number Generator. All generated numbers are virtual and for testing purposes only.</p>
+                <div class="footer-tech">
+                    <span>Built with <i class="fas fa-heart"></i> for developers</span>
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <span class="notification-text" id="notificationText"></span>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
